@@ -9,7 +9,12 @@
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
     //PROCESSAMENTO
     let joaos = []
-
+    for (const joao of listaDeNomes) {
+        if (joao.includes("João") || joao.includes("Joao")){
+            joaos.push(joao);
+        }
+    }
+    alert(joaos.join(", "))
     //SAÍDA
 
 </script>

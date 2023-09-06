@@ -6,11 +6,23 @@
     //Identifique APENAS os números INTEIROS e POSITIVOS. Adicione-os em uma lista e apresente ao fim do programa, indicando também quantos números foram localizados.
 
     //ENTRADA
-
+    let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
 
     //PROCESSAMENTO
+    let numerosLoc = 0;
+    let numerosPI = [];
 
+    for (const numero of listaDeNumeros) {
+        const sinal = Math.sign(numero)
+        if (sinal == 1) {
+            if (Number.isInteger(numero)) {
+                numerosLoc++;
+                numerosPI.push(numero);
+            }
+        }
+    }
 
     //SAÍDA
+    alert(`Foram localizados ${numerosLoc} números, são eles: ${numerosPI.join(", ")}`);
 
 </script>
